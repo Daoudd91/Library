@@ -7,6 +7,51 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Welcome to my library</h1>
+    <div class="container">
+      <button id="addBook">Add book</button>
+    </div>
+    <table id="table1">
+      <caption>
+        List of available books in my library:
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Number of pages</th>
+          <th scope="col">isRead</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="myTable"></tbody>
+    </table>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Add the new book info</p>
+        <fieldset>
+          <label for="title">Title</label>
+          <input id="title" name="title" required />
+          <label for="author">Author</label>
+          <input id="author" name="author" required />
+          <label for="numberOfPages">Number of pages</label>
+          <input
+            id="numberOfPages"
+            name="numberOfPages"
+            type="number"
+            min="1"
+            required
+          />
+          <label for="isRead">Is Read?</label>
+          <input type="checkbox" id="isRead" name="isRead" />
+        </fieldset>
+        <button id="add">Add</button>
+        <button id="cancel">Cancel</button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
